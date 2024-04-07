@@ -1,0 +1,30 @@
+{
+  "name": "@iorp/node-turbodev",
+  "version": "1.0.0",
+  "description": "A code documentation tool.",
+  "main": "lib/index.js",
+  "scripts": {
+    "makedoc":"node src/scripts/turbodoc_default.js ./turbodoc.config.js",
+    "test": "node test/test.js",
+    "clean": "rm -rf lib || rd /s /q lib",
+    "build": "npm run clean && babel src --out-dir lib",
+    "postbuild": "npm link"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iorp/node-turbodev"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "mocha": "^10.0.1"
+  },
+  "dependencies": {
+    "@iorp/node-aid": "^0.0.1",
+    "dotenv": "^16.3.1",
+    "rimraf": "^5.0.5"
+  }
+}
